@@ -43,10 +43,25 @@ function toggleColor(element) {
 const header = document.querySelector("h1#header")
 
 header.addEventListener('click', function(event){
-    toggleColor(event.target)
+    toggleColor(event.target);
 })
 
 
 /***** Deliverable 2 *****/
+const form = document.getElementById('new-player-form');
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const submittedForm = e.target;
+    const submittedPlayer = {
+        name: `${submittedForm.name.value}`,
+        nickname: `${submittedForm.nickname.value}`,
+        number: `${submittedForm.number.value}`,
+        photo: `${submittedForm.photo.value}`,
+    }
+
+    renderPlayer(submittedPlayer);
+
+    submittedForm.reset()
+})
 
 /***** Deliverable 3 *****/

@@ -26,7 +26,8 @@ Once you have it working in the console, write an event listener that will use t
 
 **YOUR NOTES**
 ```
-
+add 'click' event lister
+pass event.target to given toggleColor function
 ```
 
 ## Deliverable 2: Create Player
@@ -43,7 +44,12 @@ Some things to keep in mind:
 
 **YOUR NOTES**
 ```
-
+find the form node,
+add event listener to that node ('submit'),
+retrieve the submitted form (using event's target),
+get values by using target.(name of input field).value,
+add values to a div element,
+append div to existing div container
 ```
 
 ## Deliverable 3: Like Button
