@@ -57,6 +57,7 @@ form.addEventListener('submit', function(e){
         nickname: `${submittedForm.nickname.value}`,
         number: `${submittedForm.number.value}`,
         photo: `${submittedForm.photo.value}`,
+        likes: 0,
     }
 
     renderPlayer(submittedPlayer);
@@ -65,3 +66,12 @@ form.addEventListener('submit', function(e){
 })
 
 /***** Deliverable 3 *****/
+
+playerContainer.addEventListener('click', function(event){
+    const target = event.target;
+    if (target.tagName === "BUTTON") {
+        const div = target.parentNode
+        const likes = div.querySelector('p.likes')
+        likes.textContent = `${parseInt(likes.textContent) + 1} likes`
+    }
+})

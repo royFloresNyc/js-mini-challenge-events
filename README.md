@@ -60,5 +60,10 @@ You can decide if you'd like to use *event delegation* to handle this, or if you
 
 **YOUR NOTES**
 ```
-
+add 'click' event lister to the div.player-container
+use event delegation
+if event.target.tagName is a BUTTON,
+    find the parent element of that button,
+    find the child element "likes"
+    update (increment) the textContent of the "likes" node
 ```
