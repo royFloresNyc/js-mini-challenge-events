@@ -40,6 +40,12 @@ function toggleColor(element) {
   }
 }
 
+const header = document.querySelector("h1#header")
+
+header.addEventListener('click', function(event){
+    toggleColor(event.target)
+})
+
 
 /***** Deliverable 2 *****/
 
